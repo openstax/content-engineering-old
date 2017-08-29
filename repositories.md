@@ -1,12 +1,12 @@
 These are the major repositories with descriptions of how they interact with each other (via API calls, file data, or in-memory objects).
 
 - Services
-  - [cnx.org](#cnx-org)
-  - [archive.cnx.org](#archive-cnx-org)
-  - [publishing.cnx.org](#publishing-cnx-org)
-  - [legacy.cnx.org](#legacy-cnx-org)
+  - [cnx.org](#cnxorg)
+  - [archive.cnx.org](#archivecnxorg)
+  - [publishing.cnx.org](#publishingcnxorg)
+  - [legacy.cnx.org](#legacycnxorg)
 - Conversions
-  - [PDF Generation](#pdf-generation)
+  - [PDF Generation](#pdfgeneration)
   - [CNXML to XHTML](#cnxml-to-xhtml)
   - [CNXML validation](#cnxml-validation)
   - [XHTML validation](#xhtml-validation)
@@ -26,7 +26,7 @@ These are the major repositories with descriptions of how they interact with eac
 
 ### Talks to
 
-- [archive.cnx.org](#archive-cnx-org)
+- [archive.cnx.org](#archivecnxorg)
 - [exercises.openstax.org](https://github.com/openstax/exercises)
 - [tutor.openstax.org](https://github.com/openstax/tutor)
 
@@ -58,7 +58,7 @@ This provides **read-only** access to the archive of published content.
 
 ## publishing.cnx.org
 
-This acts as the publishing endpoint. It can either accept a specially-formatted EPUB3 file, or it listens to database changes (when publishing using [legacy.cnx.org](#legacy-cnx-org)). If a book is marked as needing to be baked, [cnx-easybake](https://github.com/Connexions/cnx-easybake) runs using a CSS file in [cnx-recipes](https://github.com/Connexions/cnx-recipes)
+This acts as the publishing endpoint. It can either accept a specially-formatted EPUB3 file, or it listens to database changes (when publishing using [legacy.cnx.org](#legacycnxorg)). If a book is marked as needing to be baked, [cnx-easybake](https://github.com/Connexions/cnx-easybake) runs using a CSS file in [cnx-recipes](https://github.com/Connexions/cnx-recipes)
 
 ### Requires
 - [cnx-publishing](https://github.com/Connexions/cnx-publishing)
@@ -68,10 +68,10 @@ This acts as the publishing endpoint. It can either accept a specially-formatted
   - [cnx-recipes](https://github.com/Connexions/cnx-recipes)
 
 ### Talks to
-- [archive.cnx.org](#archive-cnx-org) using the Postgres DB
+- [archive.cnx.org](#archivecnxorg) using the Postgres DB
 
 ### Listens to
-- [legacy.cnx.org](#legacy-cnx-org) publish events using the Postgres DB
+- [legacy.cnx.org](#legacycnxorg) publish events using the Postgres DB
 
 ### Accepts
 - specially formatted epub3 documents for publishing
@@ -85,12 +85,12 @@ This Zope application is how content is edited and published.
 - All the ones in the https://github.com/Rhaptos org
 
 ### Talks to
-- [publishing.cnx.org](#publishing-cnx-org) using the Postgres DB when content is published
+- [publishing.cnx.org](#publishingcnxorg) using the Postgres DB when content is published
 
 
 ## PDF Generation
 
-This is a separate process that is spawned by [legacy.cnx.org](#legacy-cnx-org).
+This is a separate process that is spawned by [legacy.cnx.org](#legacycnxorg).
 
 It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then uses CSS and PrinceXML to create a PDF.
 
@@ -103,29 +103,10 @@ It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then u
 
 There are 4 different CNXML is converted to XHTML:
 
-- CNXML `->` Raw XHTML
-- CNXML `->` Raw XHTML `->` Baked XHTML
-- CNXML `->` Docbook `->` PDF XHTML
-- CNXML `->` Legacy XHTML
-
-
-### CNXML -> Raw XHTML
-
-This uses XSLT files in [rhaptos.cnxmlutils](https://github.com/Connexions/rhaptos.cnxmlutils)
-
-
-### CNXML -> Raw XHTML -> Baked XHTML
-
-This uses the Raw XHTML files and converts them using special CSS files in [cnx-recipes](https://github.com/Connexions/cnx-recipes) and the CSS engine in [cnx-easybake](https://github.com/Connexions/cnx-easybake)
-
-
-### CNXML -> Docbook -> PDF XHTML
-
-This uses Docbook-XSL files in [oer.exports](https://github.com/Connexions/oer.exports). It is being **deprecated** in favor of the _Baked XHTML_
-
-### CNXML -> Legacy XHTML
-
-This uses a custom XSLT file somewhere. It is being **deprecated** in favor of the _Raw or Baked XHTML_.
+- `CNXML -> Raw XHTML`: This is the XHTML on [cnx.org](#cnxorg) and uses XSLT files in [rhaptos.cnxmlutils](https://github.com/Connexions/rhaptos.cnxmlutils)
+- `CNXML -> Raw XHTML -> Baked XHTML`: This is the XHTML on [cnx.org](#cnx-org) and uses a special CSS file associated with the Book (source in [cnx-recipes](https://github.com/Connexions/cnx-recipes) ) and the Raw XHTML files and converts them using the CSS file and the CSS engine in [cnx-easybake](https://github.com/Connexions/cnx-easybake)
+- `CNXML -> Docbook -> PDF XHTML`: This is the format for PDF Generation. It uses Docbook-XSL files in [oer.exports](https://github.com/Connexions/oer.exports). It is being **deprecated** in favor of the _Baked XHTML_
+- `CNXML -> Legacy XHTML`: This is the XHTML on [legacy.cnx.org](#legacycnxorg). It uses a custom XSLT file somewhere. This conversion is being **deprecated** in favor of the _Raw or Baked XHTML_.
 
 
 ## CNXML Validation
