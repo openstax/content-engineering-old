@@ -6,7 +6,7 @@ These are the major repositories with descriptions of how they interact with eac
   - [publishing.cnx.org](#publishingcnxorg)
   - [legacy.cnx.org](#legacycnxorg)
 - Conversions
-  - [PDF Generation](#pdfgeneration)
+  - [PDF Generation](#pdf-generation)
   - [CNXML to XHTML](#cnxml-to-xhtml)
   - [CNXML validation](#cnxml-validation)
   - [XHTML validation](#xhtml-validation)
