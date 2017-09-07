@@ -1,3 +1,62 @@
+# Compare 2 versions of HTML files
+
+
+```shell
+# Assumes there are 2 XHTML files: col-master.xhtml and col-new.xhtml
+xmllint --pretty 2 col-master.xhtml > col-master.pretty.xhtml 
+xmllint --pretty 2 col-new.xhtml    > col-new.pretty.xhtml 
+diff col-master.pretty.xhtml col-new.pretty.xhtml 
+```
+
+
+<details>
+
+<summary>Click me to see example output</summary>
+
+```diff
+diff col12074-master.pretty.xhtml col12074-new.pretty.xhtml 
+5,9c5
+<     ><link
+<         rel="stylesheet"
+<         href="../css/ccap-university-physics.css"
+<         type="text/css"
+<     /><title
+---
+>     ><title
+16a13,16
+>     /><link
+>         rel="stylesheet"
+>         type="text/css"
+>         href="../../css/ccap-university-physics.css"
+22c22
+<         id="idm30481946848"
+---
+>         id="idm544640446160"
+73c73
+<               id="idm30482357104"
+---
+>               id="idm544639412288"
+75c75
+<                 id="idm30482357104"
+---
+>                 id="idm544639412288"
+87c87
+<             >PDF Generated: 2017/08/18 09:21:45</div
+---
+>             >PDF Generated: 2017/09/07 10:51:41</div
+298c298
+<                 href="#idm30481999856"
+---
+>                 href="#idm544640165920"
+314c314
+<                     href="#idm30482292144"
+---
+>                     href="#idm544640130480"
+```
+
+</details>
+
+
 # List versions of installed packages
 
 ```shell
