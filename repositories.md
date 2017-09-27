@@ -13,41 +13,50 @@ These are the major repositories with descriptions of how they interact with eac
 
 **Note:** descriptions about a repository should probably be copied into the top of the repository's `README.md` file.
 
+# Organizations
 
-## cnx.org
+Openstax comprises 3 GitHub organizations: [openstax](https://github.com/openstax), [connexions](https://github.com/connexions), and [rhaptos](https://github.com/rhaptos).
 
-### Provides
+
+- [rhaptos](https://github.com/rhaptos) : repositories that are used to run [legacy.cnx.org](#legacycnxorg). These are Plone packages
+- [connexions](https://github.com/connexions) : repositories that are used to run [cnx.org](#cnxorg)
+- [openstax](https://github.com/openstax) : most of the new repositories are in this organization
+
+
+# cnx.org
+
+## Provides
 
 - the single-page app for reading content (Books and Pages) in a browser.
 
 
-### Repositories
+## Repositories
 - [webview](https://github.com/Connexions/webview)
 
-### Talks to
+## Talks to
 
 - [archive.cnx.org](#archivecnxorg)
 - [exercises.openstax.org](https://github.com/openstax/exercises)
 - [tutor.openstax.org](https://github.com/openstax/tutor)
 
 
-## archive.cnx.org
+# archive.cnx.org
 
 This provides **read-only** access to the archive of published content.
 
-### Provides
+## Provides
 
 - retrieving content (Books and Pages)
 - searching for content
 - retrieving metadata about content
 
 
-### Accepts
+## Accepts
 
 - published content (by virtue of being in the Postgres DB)
 
 
-### Repositories
+## Repositories
 
 - [cnx-archive](https://github.com/Connexions/cnx-archive)
   - [cnx-db](https://github.com/Connexions/cnx-db)
@@ -56,50 +65,50 @@ This provides **read-only** access to the archive of published content.
   - [rhaptos.cnxmlutils](https://github.com/Connexions/rhaptos.cnxmlutils)
 
 
-## publishing.cnx.org
+# publishing.cnx.org
 
 This acts as the publishing endpoint. It can either accept a specially-formatted EPUB3 file, or it listens to database changes (when publishing using [legacy.cnx.org](#legacycnxorg)). If a book is marked as needing to be baked, [cnx-easybake](https://github.com/Connexions/cnx-easybake) runs using a CSS file in [cnx-recipes](https://github.com/Connexions/cnx-recipes)
 
-### Requires
+## Requires
 - [cnx-publishing](https://github.com/Connexions/cnx-publishing)
   - [cnx-archive](https://github.com/Connexions/cnx-archive)
   - [cnx-epub](https://github.com/Connexions/cnx-epub)
   - [cnx-easybake](https://github.com/Connexions/cnx-easybake)
   - [cnx-recipes](https://github.com/Connexions/cnx-recipes)
 
-### Talks to
+## Talks to
 - [archive.cnx.org](#archivecnxorg) using the Postgres DB
 
-### Listens to
+## Listens to
 - [legacy.cnx.org](#legacycnxorg) publish events using the Postgres DB
 
-### Accepts
+## Accepts
 - specially formatted epub3 documents for publishing
 
 
-## legacy.cnx.org
+# legacy.cnx.org
 
 This Zope application is how content is edited and published.
 
-### Repositories
+## Repositories
 - All the ones in the https://github.com/Rhaptos org
 
-### Talks to
+## Talks to
 - [publishing.cnx.org](#publishingcnxorg) using the Postgres DB when content is published
 
 
-## PDF Generation
+# PDF Generation
 
 This is a separate process that is spawned by [legacy.cnx.org](#legacycnxorg).
 
 It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then uses CSS and PrinceXML to create a PDF.
 
-### Repositories
+## Repositories
 
 - [oer.exports](https://github.com/Connexions/oer.exports) (Private)
 
 
-## CNXML to XHTML
+# CNXML to XHTML
 
 There are 4 different CNXML is converted to XHTML:
 
@@ -109,10 +118,10 @@ There are 4 different CNXML is converted to XHTML:
 - `CNXML -> Legacy XHTML`: This is the XHTML on [legacy.cnx.org](#legacycnxorg). It uses a custom XSLT file somewhere. This conversion is being **deprecated** in favor of the _Raw or Baked XHTML_.
 
 
-## CNXML Validation
+# CNXML Validation
 
 This is described as a Relax-NG file in [cnxml](https://github.com/Connexions/cnxml).
 
-## XHTML Validation
+# XHTML Validation
 
 This is described as a Relax-NG file in [cnxml](https://github.com/Connexions/cnxml).
