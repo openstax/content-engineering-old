@@ -1,0 +1,5 @@
+- cnx.org
+  - The website for OpenStax CNX, the online repository of open content
+- cnx-archive
+- cnx-publishing-api
+- 

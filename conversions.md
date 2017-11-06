@@ -1,3 +1,5 @@
+**note move to oer.exports**
+
 # PDF Generation
 
 This is a separate process that is spawned by [legacy.cnx.org](#legacycnxorg).

@@ -15,10 +15,11 @@ Openstax is comprised of 3 GitHub organizations:
 
 Check the individual `.md` files in here to find out about terminology, URL structure, etc.
 
-- [Terminology and API endpoints](./terms.md)
+- [API endpoints](./api.md)
+- [PDF Generation and Conversions](./conversions.md)
 - [Repositories and Services](./repositories.md)
 - [Services](./services.md)
-- [PDF Generation and Conversions](./conversions.md)
+- [Terminology](./terminology.md)
 
 ---
 
