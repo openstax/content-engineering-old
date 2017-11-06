@@ -2,7 +2,7 @@
 
 This repository acts as a Wiki for learning more about the book tools projects.
 
-#Organizations
+## Organizations
 
 Openstax is comprised of 3 GitHub organizations:
 [openstax](https://github.com/openstax), [connexions](https://github.com/connexions), and [rhaptos](https://github.com/rhaptos).
@@ -11,7 +11,7 @@ Openstax is comprised of 3 GitHub organizations:
 - [connexions](https://github.com/connexions) : repositories that are used to run [cnx.org](#cnxorg)
 - [rhaptos](https://github.com/rhaptos) : repositories that are used to run [legacy.cnx.org](#legacycnxorg). These are Plone packages
 
----
+## TOC
 
 Check the individual `.md` files in here to find out about terminology, URL structure, etc.
 

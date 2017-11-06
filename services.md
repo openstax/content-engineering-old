@@ -1,11 +1,11 @@
- #Services
+# Services
 List of OpenStax services
   - [cnx.org](#cnxorg)
   - [archive.cnx.org](#archivecnxorg)
   - [publishing.cnx.org](#publishingcnxorg)
   - [legacy.cnx.org](#legacycnxorg)
 
-  ## cnx.org
+  # cnx.org
 
   ### Provides
 

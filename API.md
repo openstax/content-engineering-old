@@ -1,5 +1,3 @@
-(split this into "Terminology" and "API" if needed)
-
 # CNX APIs
 
 https://cnx.org APIs are split into 4 areas and documented in greater detail in each repository.
