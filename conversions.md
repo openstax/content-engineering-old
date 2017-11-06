@@ -1,3 +1,12 @@
+# PDF Generation
+
+This is a separate process that is spawned by [legacy.cnx.org](#legacycnxorg).
+
+It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then uses CSS and PrinceXML to create a PDF.
+
+## Repositories
+
+- [oer.exports](https://github.com/Connexions/oer.exports) (Private)
 - Conversions
   - [PDF Generation](#pdf-generation)
   - [CNXML to XHTML](#cnxml-to-xhtml)
