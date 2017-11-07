@@ -1,21 +1,22 @@
 **Note:** move to oer.exports
+**Note:** For term definitions visit [terminology.md](#)
 
-# PDF Generation
-
-This is a separate process that is spawned by [legacy.cnx.org](#https://legacy.cnx.org).
-
-It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then uses CSS and PrinceXML to create a PDF.
-
-## Repositories
-
-- [oer.exports](https://github.com/Connexions/oer.exports) (Private)
-- Conversions
+# Conversions
   - [PDF Generation](#pdf-generation)
   - [CNXML to XHTML](#cnxml-to-xhtml)
   - [CNXML validation](#cnxml-validation)
   - [XHTML validation](#xhtml-validation)
 
-  # CNXML to XHTML
+## Repositories
+  - [oer.exports](https://github.com/Connexions/oer.exports) (Private)
+
+# PDF Generation
+
+This is a separate process that is spawned by [legacy.cnx.org](https://legacy.cnx.org).
+
+It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then uses CSS and PrinceXML to create a PDF.
+
+# CNXML to XHTML
 
   There are 4 different CNXML is converted to XHTML:
 
@@ -25,10 +26,10 @@ It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then u
   - `CNXML -> Legacy XHTML`: This is the XHTML on [legacy.cnx.org](#legacycnxorg). It uses a custom XSLT file somewhere. This conversion is being **deprecated** in favor of the _Raw or Baked XHTML_.
 
 
-  # CNXML Validation
+# CNXML Validation
 
   This is described as a Relax-NG file in [cnxml](https://github.com/Connexions/cnxml).
 
-  # XHTML Validation
+# XHTML Validation
 
   This is described as a Relax-NG file in [cnxml](https://github.com/Connexions/cnxml).
