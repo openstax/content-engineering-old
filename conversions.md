@@ -1,4 +1,4 @@
-**note move to oer.exports**
+**Note:** move to oer.exports
 
 # PDF Generation
 

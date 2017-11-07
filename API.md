@@ -1,21 +1,27 @@
+## Table of Contents
+  -[CNX APIs](#cnx-apis)
+  -[CNX Content Types](#cnx-content-types)
+  -[Retrieving CNX Content](#retrieving-cnx-content)
+  -[Publishing CNX Content](#publishing-cnx-content)
+
 # CNX APIs
 
 https://cnx.org APIs are split into 4 areas and documented in greater detail in each repository.
 
-The 4 different areas are: **confirm what 4 areas are**
-  - [^cnx-archive](#)
-    - retrieve published content including [search](#search-api)**is search one of the 4 areas**
-  - [^cnx-publishing-api](#)
-    - change content
-  - [entry 3](#)
-  - [entry 4](#)
+The 4 different areas are:
+**Note:** confirm what 4 areas are
+  - [^cnx-archive] - retrieve published content including [search](#search-api) **Note:** is search one of the 4 areas
+  - [^cnx-publishing-api] - change content
+  - [area 3]
+  - [area 4]
 
-Browser URLs are managed and documented in [^webview]. **why is this under the CNX APIs section? Provide greater description or move to a different section or .md**
+Browser URLs are managed and documented in [^webview].
+**Note:** Why is this under the CNX APIs section? Provide greater description or move to a different section or .md
 
 ## Identifiers
-**should identifies section be moved to terminology? Is this related to APIs. Should add description/reasoning of this section no matter where it goes**
+**Note:** Should identifiers section be moved to terminology? Is this related to APIs? Should add description/reasoning of this section no matter where it goes.
 
-There are 5 types of identifiers used within https://cnx.org
+There are 5 types of identifiers used within https://cnx.org :
 
 - [sha hash](#sha-hash)
 - [UUID](#uuid)
@@ -66,7 +72,7 @@ A specific version of a [Book](#book) or [Page](#page) is identified by a `{UUID
 This is similar to [UUID and version](#uuid-and-version) except that a short UUID is used instead of a full UUID
 
 
-## Types
+# CNX Content Types
 
 Content in cnx generally falls into 3 types:
 
@@ -164,7 +170,7 @@ Physics Book
 ```
 
 
-## Retrieving Content
+# Retrieving CNX Content
 
 Book content can be retrieved by:
 
@@ -201,7 +207,7 @@ To handle the case of short UUIDs and optional version numbers several server re
 1. JavaScript changes the browser URL to [https://cnx.org/contents/{BOOK_SHORT_ID}@{VER}:{PAGE_SHORT_ID}@{VER}}/{TITLE_SLUG}](https://cnx.org/contents/Ax2o07Ul@9.74:HR_VN3f7@3/Introduction-to-Science-and-th)
 
 
-## Publishing Content
+# Publishing CNX Content
 
 Publishing content requires POSTing a specially-formatted ePUB as a payload.
 

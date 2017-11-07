@@ -8,10 +8,10 @@ Openstax is comprised of 3 GitHub organizations:
 [openstax](https://github.com/openstax), [connexions](https://github.com/connexions), and [rhaptos](https://github.com/rhaptos).
 
 - [openstax](https://github.com/openstax) : most of the new repositories are in this organization
-- [connexions](https://github.com/connexions) : repositories that are used to run [cnx.org](#cnxorg)
-- [rhaptos](https://github.com/rhaptos) : repositories that are used to run [legacy.cnx.org](#legacycnxorg). These are Plone packages
+- [connexions](https://github.com/connexions) : repositories that are used to run [cnx.org](#cnx.org)
+- [rhaptos](https://github.com/rhaptos) : repositories that are used to run [legacy.cnx.org](#legacy.cnx.org). These are Plone packages
 
-## TOC
+## Table of Contents
 
 Check the individual `.md` files in here to find out about terminology, URL structure, etc.
 
