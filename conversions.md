@@ -2,7 +2,7 @@
 
 # PDF Generation
 
-This is a separate process that is spawned by [legacy.cnx.org](#legacycnxorg).
+This is a separate process that is spawned by [legacy.cnx.org](#https://legacy.cnx.org).
 
 It uses XSLT transform files to convert CNXML `->` Docbook `->` XHTML and then uses CSS and PrinceXML to create a PDF.
 
