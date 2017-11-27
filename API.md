@@ -6,21 +6,17 @@
 
 # CNX APIs
 
-https://cnx.org APIs are split into 4 areas and documented in greater detail in each repository.
+https://cnx.org APIs are split into different areas and documented in greater detail in each repository.
 
-The 4 different areas are:
-  - **Note:** confirm what 4 areas are
-  - [cnx-archive](https://github.com/Connexions/cnx-archive) - retrieve published content including [search](#search-api)
-    - **Note:** is search one of the 4 areas?
+The different areas are:
+  - [cnx-archive](https://github.com/Connexions/cnx-archive) - retrieve published content including
   - [cnx-publishing-api](https://github.com/Connexions/cnx-publishing#http-api) - change content
-  - [area 3]()
-  - [area 4]()
+  - [search](#search-api)
 
 Browser URLs are managed and documented in [^webview].
  - **Note:** Why is this under the CNX APIs section? Provide greater description or move to a different section or .md
 
 ## Identifiers
- - **Note:** Should identifiers section be moved to terminology? Is this related to APIs? Should add description/reasoning of this section no matter where it goes.
 
 There are 5 types of identifiers used within https://cnx.org :
 

@@ -1,5 +1,4 @@
-**Note:** move to oer.exports
-**Note:** For term definitions visit [terminology.md](#)
+**Note:** For term definitions visit [terminology.md](https://github.com/openstax/book-tools/blob/new-book-tools/terminology.md)
 
 # Conversions
   - [PDF Generation](#pdf-generation)

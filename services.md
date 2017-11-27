@@ -4,7 +4,7 @@ List of OpenStax services
   - [archive.cnx.org](#archivecnxorg)
   - [publishing.cnx.org](#publishingcnxorg)
   - [legacy.cnx.org](#legacycnxorg)
-**Note:** You can visit each URL in the list of services, but they don’t all have a homepage. For example: https://archive.cnx.org/contents/9a1df55a-b167-4736-b5ad-15d996704270%403.2 shows the Table of Contents for the Calculus textbook and you can click the links to read a Page in the Book. The current way to do it is to go to cnx.org , navigate to a book, and then change the URL to be `archive.cnx.org` instead of `cnx.org` . There is currently and existing PR regarding this: https://github.com/Connexions/webview/pull/1583 . **Note:** RM This line once it is merged. 
+  - **Note:** You can visit each URL in the list of services, but they don’t all have a homepage. For example: https://archive.cnx.org/contents/9a1df55a-b167-4736-b5ad-15d996704270%403.2 shows the Table of Contents for the Calculus textbook and you can click the links to read a Page in the Book. The current way to do it is to go to cnx.org , navigate to a book, and then change the URL to be `archive.cnx.org` instead of `cnx.org` . There is currently and existing PR regarding this: https://github.com/Connexions/webview/pull/1583 . **Note:** RM This line once it is merged. 
   # cnx.org
 
   ### Provides
