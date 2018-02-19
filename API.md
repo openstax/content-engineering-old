@@ -3,6 +3,7 @@
   - [CNX Content Types](#cnx-content-types)
   - [Retrieving CNX Content](#retrieving-cnx-content)
   - [Publishing CNX Content](#publishing-cnx-content)
+  - [Press APIs](https://cnx-press.readthedocs.io/en/latest/web_api.html)
 
 # CNX APIs
 
